@@ -29,4 +29,4 @@ app.use((err: Error, request: Request, response: Response, next: NextFunction) =
 })
 
 // http://localhost:port
-app.listen(3000, () => console.log('server is runing nwl'))
+app.listen(3000, () => console.log('server is runing'))
