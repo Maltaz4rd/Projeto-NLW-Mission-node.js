@@ -28,7 +28,6 @@ class AuthenticateUserServices {
             throw new Error("senha invalida")
         }
 
-        console.log("gerando token");
         //gerar token
         const token = sign({
             email: user.email
@@ -37,8 +36,6 @@ class AuthenticateUserServices {
             subject: user.id,
             expiresIn: "1d"
         })
-
-        console.log("token Gerado " + token)
 
         return (token)
     }
