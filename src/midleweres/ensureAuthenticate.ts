@@ -27,7 +27,7 @@ function ensureAutheticated(request: Request, response: Response, next: NextFunc
 
         next()
 
-    } catch {
+    } catch (err) {
         response.status(401).end()
     }
 

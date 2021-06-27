@@ -15,8 +15,6 @@ class CreateComplimentController {
             user_sender: user_id, user_receiver, tag_id, message
         })
 
-        console.log(compliment);
-
 
         return response.json(compliment)
     }
