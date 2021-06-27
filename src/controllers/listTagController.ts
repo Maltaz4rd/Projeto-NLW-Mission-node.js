@@ -7,8 +7,7 @@ class ListTagController {
     async handle(request: Request, response: Response) {
         const listTagServices = new ListTagServices()
 
-        let tags = await listTagServices.execute()
-        tags = tags.map((tag) => ({ ...tag, name_custom: `#${tag.nome}` }))
+        const tags = await listTagServices.execute()
 
         return response.json(tags)
     }
