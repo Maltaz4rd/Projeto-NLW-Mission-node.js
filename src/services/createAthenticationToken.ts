@@ -17,7 +17,7 @@ class AuthenticateUserServices {
         const user = await userRepository.findOne({ email })
 
         if (!user) {
-            throw new Error("Emailinvalida")
+            throw new Error("Email/senha invalido")
         }
 
         //verificar se a senha está correta
@@ -25,7 +25,7 @@ class AuthenticateUserServices {
         const authenticated = await compare(passsword, user.passsword)
 
         if (!authenticated) {
-            throw new Error("senha invalida")
+            throw new Error("Email/senha invalido")
         }
 
         //gerar token
